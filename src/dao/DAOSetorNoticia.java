@@ -31,7 +31,7 @@ public class DAOSetorNoticia extends DAO<SetorNoticia>{
 			q.constrain(SetorNoticia.class);
 			q.descend("descricao").constrain(caracteres).contains();
 			q.descend("data").orderAscending();
-			List<SetorNoticia> resultados = q.execute(); 
+			List<SetorNoticia> resultados = q.execute();
 			return resultados;
 		}
 		//Busca POR titulo da noticia 

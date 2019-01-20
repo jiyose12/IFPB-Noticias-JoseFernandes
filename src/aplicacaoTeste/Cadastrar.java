@@ -1,6 +1,7 @@
 package aplicacaoTeste;
 
 import fachada.Fachada;
+import modelo.IndPublicar;
 import modelo.Noticia;
 import modelo.SetorNoticia;
 import modelo.TipoNoticia;
@@ -57,12 +58,12 @@ public class Cadastrar {
 		//Cadastro Noticias
 		try {
 			System.out.println("cadastrando noticia...");
-			n=Fachada.cadastrarNoticia(999, "noticiaanterior", "este é o obj referente as noticias anteriores", null, null);
-			n=Fachada.cadastrarNoticia(1,"O bb nasceu", "entao essa é a descricao do bb nascendo", "Cejusc", "intranet");
-			n=Fachada.cadastrarNoticia(2,"Limpeza na 3 vara ", "vao limpar tudo aqui", "1 Vara" , "internet");
-			n=Fachada.cadastrarNoticia(3,"Maior taxa de conciciação de todos os tempos", "No dia de hje foram registradas 4 conciliacoes", "Cejusc", "intranet");
-			n=Fachada.cadastrarNoticia(4,"Revista Judiciaria foi lancada na vara", "A realizacao da cerimonia foi realizada", "2 Vara", "internet");
-			n=Fachada.cadastrarNoticia(5,"Servidor tomou posse", "O servidor fulano tomou posse no setor de distribuicao em Sousa", "7 Vara", "internet");
+			//n=Fachada.cadastrarNoticia(999, "noticiaanterior", "este é o obj referente as noticias anteriores", null, null);
+			n=Fachada.cadastrarNoticia("O bb nasceu", "entao essa é a descricao do bb nascendo", "Cejusc", "intranet", IndPublicar.PUBLICADO, "01/12/2001");
+			n=Fachada.cadastrarNoticia("Limpeza na 3 vara ", "vao limpar tudo aqui", "1 Vara" , "internet", IndPublicar.REVISAO, "11/12/2012");
+			n=Fachada.cadastrarNoticia("Maior taxa de conciciação de todos os tempos", "No dia de hje foram registradas 4 conciliacoes", "Cejusc", "intranet", IndPublicar.PUBLICADO, "08/02/1999");
+			n=Fachada.cadastrarNoticia("Revista Judiciaria foi lancada na vara", "A realizacao da cerimonia foi realizada", "2 Vara", "internet", IndPublicar.DELETADO, "30/05/2017");
+			n=Fachada.cadastrarNoticia("Servidor tomou posse", "O servidor fulano tomou posse no setor de distribuicao em Sousa", "7 Vara", "internet", IndPublicar.PUBLICADO, "12/11/2150");
 			
 		} catch (Exception e) {System.out.println(e.getMessage());}
 		

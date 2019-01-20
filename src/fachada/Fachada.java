@@ -3,13 +3,11 @@ package fachada;
 import java.security.MessageDigest;
 import java.util.List;
 
+import daojpa.*;
+
 import javax.xml.bind.DatatypeConverter;
 
-import dao.DAO;
-import dao.DAONoticia;
-import dao.DAOSetorNoticia;
-import dao.DAOTipoNoticia;
-import dao.DAOUsuario;
+import modelo.IndPublicar;
 import modelo.Noticia;
 import modelo.SetorNoticia;
 import modelo.TipoNoticia;
@@ -59,11 +57,12 @@ public class Fachada {
 	 * 
 	 **********************************************************/
 	public static Usuario cadastrarUsuario(String nome, String senha) throws Exception {
-		
 		Usuario u = daousuario.autenticarNomeUsuario(nome);
-		if (u != null)
+	
+		if (u != null) {
+			DAO.rollback();
 			throw new Exception("Usuário já cadastrado previamente: " + nome);
-		
+		}
 		String hash = getHash(senha.getBytes(), "SHA-256");
 		System.out.println(hash);
 		
@@ -78,11 +77,11 @@ public class Fachada {
 	}
 
 	//Cadastro do Obj refere te às Noticias Anteriores
-	public static Noticia cadastrarNoticiaAnterior(int id, String titulo, String descricao, String setor, String tipo) throws Exception{
-	Noticia n = new Noticia(id, titulo, descricao, null );
-	return n;
-	}
-	public static Noticia cadastrarNoticia(int id, String titulo, String descricao, String setor, String tipo) throws Exception{
+//	public static Noticia cadastrarNoticiaAnterior(int id, String titulo, String descricao, String setor, String tipo) throws Exception{
+//	Noticia n = new Noticia(id, titulo, descricao, null );
+//	return n;
+//	}
+	public static Noticia cadastrarNoticia(String titulo, String descricao, String setor, String tipo, IndPublicar indpublicar, String datastr ) throws Exception{
 		if (logada ==null)
 			throw new Exception("Usuário precisa estar logado");
 		DAO.begin();	
@@ -92,22 +91,27 @@ public class Fachada {
 		if (n != null)
 			throw new Exception("Noticia já cadastrada previamente: " + titulo);
 		
-		SetorNoticia s = daosetornoticia.readByDescription(setor);
-				if(s == null)
+		//SetorNoticia s = daosetornoticia.readByDescription(setor);
+	Boolean	s = daosetornoticia.readByDescriptionBool(setor);
+				//if(s == null)
+			if(s == false)
 			throw new Exception("Setor não cadastrado: " + setor);
 
-		TipoNoticia t = daotiponoticia.readByDescription(tipo);
-				if(t == null)
+		//TipoNoticia t = daotiponoticia.readByDescription(tipo);
+			Boolean t = daotiponoticia.readByDescriptionBool(tipo);
+				//if(t == null)
+			if(t == false)
 			throw new Exception("Tipo não cadastrado: " + tipo);
 				
-		s = new SetorNoticia(setor);
-		t = new TipoNoticia(tipo);
-		n = new Noticia(id, titulo, descricao, t);
+		SetorNoticia set = new SetorNoticia(setor);
+		TipoNoticia tip = new TipoNoticia(tipo);
+		n = new Noticia(titulo, descricao, indpublicar, datastr);
 		
-		s.cadastrarNoticia(n);
-		t.cadastrarNoticia(n);
+		set.cadastrarNoticia(n);
+		tip.cadastrarNoticia(n);
 		
-		n.adicionarSetor(s);
+		n.adicionarTipo(tip);
+		n.adicionarSetor(set);
 			
 		daonoticia.create(n);
 		DAO.commit();
@@ -216,8 +220,8 @@ public class Fachada {
 			throw new Exception("excluir noticia - titulo inexistente: " + x);
 		else
 			
-			noticiaanterior.adicionarNoticiasAnteriores(n);
-			daonoticia.delete(n);
+//			noticiaanterior.adicionarNoticiasAnteriores(n);
+//			daonoticia.delete(n);
 		
 //		SetorNoticia s = daosetornoticia.readByNoticeTitleInSetor(x);
 //		if (s==null) 

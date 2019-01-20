@@ -7,12 +7,26 @@ package modelo;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TipoNoticia {
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 
+@Entity
+public class TipoNoticia {
+	@Id		
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	private String descricao;
+	@ManyToMany(mappedBy="tipo", cascade={CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH},
+			fetch=FetchType.LAZY) 
 	private List<Noticia> noticias = new ArrayList<Noticia>();
 	
+	public TipoNoticia() {}
 	public TipoNoticia(String descricao) {
 		super();
 		this.descricao = descricao;

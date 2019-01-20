@@ -7,12 +7,28 @@ package modelo;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SetorNoticia {
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 
+@Entity
+public class SetorNoticia {
+	@Id		
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	private String descricao;
+	@ManyToMany(fetch=FetchType.LAZY,
+			cascade= {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH,CascadeType.REFRESH}
+			)
 	private List<Noticia> noticias = new ArrayList<Noticia>();
 	
+	public SetorNoticia() {}
 	public SetorNoticia(String descricao) {
 		super();
 		this.descricao = descricao;
