@@ -19,11 +19,22 @@ import swing.TelaLogin;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JTextArea;
+import javax.swing.JButton;
+import java.awt.ScrollPane;
+import javax.swing.JScrollPane;
+import java.awt.Component;
+import javax.swing.ScrollPaneConstants;
 
 public class TelaPrincipalNoticias {
 
 	private JFrame frame;
-
+	private JTextField txtTitulo;
+	private JTextField txtSetor;
+	private JTextField txtTipo;
+	private JTextField txtDescricao;
 	/**
 	 * Launch the application.
 	 */
@@ -52,7 +63,7 @@ public class TelaPrincipalNoticias {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
+		frame.setBounds(100, 100, 485, 410);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JMenuBar menuBar = new JMenuBar();
@@ -100,6 +111,131 @@ public class TelaPrincipalNoticias {
 			}
 		});
 		mnCadastrar.add(mntmCadastrarnoticia);
+		
+		JMenuItem mntmCadastrarusuario = new JMenuItem("CadastrarUsuario");
+		mntmCadastrarusuario.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					TelaCadastroUsuario telacadastrousuario = new TelaCadastroUsuario();
+					telacadastrousuario.setVisible(true);
+				} catch (Exception e2) {
+					// TODO: handle exception
+				}
+			}
+		});
+		
+		mnCadastrar.add(mntmCadastrarusuario);
+		frame.getContentPane().setLayout(null);
+		
+		txtTitulo = new JTextField();
+		txtTitulo.setText("Titulo");
+		txtTitulo.setColumns(10);
+		txtTitulo.setBounds(22, 25, 115, 20);
+		frame.getContentPane().add(txtTitulo);
+		
+		txtSetor = new JTextField();
+		txtSetor.setText("Setor");
+		txtSetor.setColumns(10);
+		txtSetor.setBounds(22, 207, 115, 20);
+		frame.getContentPane().add(txtSetor);
+		
+		txtTipo = new JTextField();
+		txtTipo.setText("Tipo");
+		txtTipo.setColumns(10);
+		txtTipo.setBounds(22, 268, 115, 20);
+		frame.getContentPane().add(txtTipo);
+		
+		txtDescricao = new JTextField();
+		txtDescricao.setText("Descricao");
+		txtDescricao.setBounds(22, 90, 115, 67);
+		frame.getContentPane().add(txtDescricao);
+		
+		JScrollPane scrollPane = new JScrollPane((Component) null);
+		scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+		scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+		scrollPane.setBounds(230, 25, 229, 292);
+		frame.getContentPane().add(scrollPane);
+		
+		JTextArea textArea = new JTextArea();
+		scrollPane.setViewportView(textArea);
+		
+		JButton btnConsultar = new JButton("Consultar pelo Titulo");
+		btnConsultar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					String titulo = txtTitulo.getText();
+					
+					
+					Fachada.inicializar();
+					String result = Fachada.consultarNoticiasPorParteTitulo(titulo);
+					textArea.setText(result);
+					//Fachada.finalizar();
+					
+				} catch (Exception e2) {
+					JOptionPane.showMessageDialog(null,e2.getMessage());
+				}
+			}
+		});
+		btnConsultar.setBounds(22, 56, 163, 23);
+		frame.getContentPane().add(btnConsultar);
+		
+		JButton btnConsultarPelaDescricao = new JButton("Consultar pela Descricao");
+		btnConsultarPelaDescricao.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					String descricao = txtDescricao.getText();
+					
+					Fachada.inicializar();
+					String result = Fachada.consultarNoticiasPorParteConteudo(descricao);
+					textArea.setText(result);
+					//Fachada.finalizar();
+					
+				} catch (Exception e2) {
+					JOptionPane.showMessageDialog(null,e2.getMessage());
+				}
+			}
+		});
+		btnConsultarPelaDescricao.setBounds(10, 168, 195, 23);
+		frame.getContentPane().add(btnConsultarPelaDescricao);
+		
+		JButton btnConsultarPeloSetor = new JButton("Consultar pelo Setor");
+		btnConsultarPeloSetor.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					String setornoticia = txtSetor.getText();
+					
+					Fachada.inicializar();
+					String result = Fachada.consultarNoticiasPorNomeSetor(setornoticia);
+					textArea.setText(result);
+					//Fachada.finalizar();
+					
+				} catch (Exception e2) {
+					JOptionPane.showMessageDialog(null,e2.getMessage());
+				}
+			}
+		});
+		btnConsultarPeloSetor.setBounds(22, 234, 163, 23);
+		frame.getContentPane().add(btnConsultarPeloSetor);
+		
+		JButton btnConsultarPeloTipo = new JButton("Consultar pelo Tipo");
+		btnConsultarPeloTipo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					String tiponoticia = txtTipo.getText();
+					
+					Fachada.inicializar();
+					String result = Fachada.consultarNoticiasPorNomeTipo(tiponoticia);
+					textArea.setText(result);
+					//Fachada.finalizar();
+					
+				} catch (Exception e2) {
+					JOptionPane.showMessageDialog(null,e2.getMessage());
+				}
+			}
+		});
+		btnConsultarPeloTipo.setBounds(22, 294, 163, 23);
+		frame.getContentPane().add(btnConsultarPeloTipo);
+		
+		
 	}
-
 }

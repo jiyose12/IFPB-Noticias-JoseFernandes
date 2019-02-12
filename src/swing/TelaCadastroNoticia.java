@@ -9,6 +9,7 @@ import javax.swing.border.EmptyBorder;
 
 import fachada.Fachada;
 import modelo.IndPublicar;
+import modelo.Noticia;
 
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
@@ -23,10 +24,10 @@ public class TelaCadastroNoticia extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField txtTitulo;
-	private JTextField txtDescricao;
 	private JTextField txtSetornoticia;
 	private JTextField txtTiponoticia;
 	private JTextField txtData;
+	private JTextField textField;
 
 	/**
 	 * Launch the application.
@@ -66,7 +67,7 @@ public class TelaCadastroNoticia extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			try {
 				String titulo = txtTitulo.getText();
-				String descricao = txtDescricao.getText();
+				String descricao = textField.getText();
 				String setornoticia = txtSetornoticia.getText();
 				String tiponoticia = txtTiponoticia.getText();
 				String data = txtData.getText();
@@ -75,6 +76,13 @@ public class TelaCadastroNoticia extends JFrame {
 				
 				Fachada.cadastrarNoticia(titulo, descricao, setornoticia, tiponoticia, IndPublicar.PUBLICADO, data);
 				
+				Noticia n = Fachada.consultarNoticiaPorTitulo(titulo);
+				String a = n.getTitulo();
+				Fachada.finalizar();
+				
+				JOptionPane.showMessageDialog(null,"Noticia Cadastrada com sucesso: "+a+"\n");
+				
+				dispose(); //fecha a janela
 				
 			} catch (Exception e2) {
 				JOptionPane.showMessageDialog(null,e2.getMessage());
@@ -93,26 +101,18 @@ public class TelaCadastroNoticia extends JFrame {
 		lblTitulo.setBounds(44, 33, 46, 14);
 		contentPane.add(lblTitulo);
 		
-		txtDescricao = new JTextField();
-		txtDescricao.setText("Descricao");
-		txtDescricao.setColumns(10);
-		txtDescricao.setBounds(106, 61, 261, 130);
-		contentPane.add(txtDescricao);
-		
 		txtSetornoticia = new JTextField();
-		txtSetornoticia.setText("SetorNoticia");
+		txtSetornoticia.setToolTipText("SetorNoticia");
 		txtSetornoticia.setColumns(10);
 		txtSetornoticia.setBounds(106, 226, 113, 20);
 		contentPane.add(txtSetornoticia);
 		
 		txtTiponoticia = new JTextField();
-		txtTiponoticia.setText("TipoNoticia");
 		txtTiponoticia.setColumns(10);
 		txtTiponoticia.setBounds(106, 280, 113, 20);
 		contentPane.add(txtTiponoticia);
 		
 		txtData = new JTextField();
-		txtData.setText("Data");
 		txtData.setColumns(10);
 		txtData.setBounds(254, 226, 113, 20);
 		contentPane.add(txtData);
@@ -128,6 +128,10 @@ public class TelaCadastroNoticia extends JFrame {
 		JLabel lblDatanoticia = new JLabel("DataNoticia");
 		lblDatanoticia.setBounds(254, 202, 74, 14);
 		contentPane.add(lblDatanoticia);
+		
+		textField = new JTextField();
+		textField.setBounds(106, 61, 261, 135);
+		contentPane.add(textField);
 	}
 
 }

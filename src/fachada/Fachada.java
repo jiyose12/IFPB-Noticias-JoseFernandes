@@ -153,6 +153,20 @@ public class Fachada {
 	 * 
 	 **********************************************************/
 	
+	public static Noticia consultarNoticiaPorTitulo(String caracteres) throws Exception{
+		
+		if (logada ==null)
+			throw new Exception("Usuário precisa estar logado");
+//		
+		Noticia result = daonoticia.readByTitle(caracteres);
+		
+		if (result== null)
+			throw new Exception("nenhum resultado");
+		else 
+		
+		return result;
+	}
+	
 	public static String consultarNoticiasPorParteTitulo(String caracteres) throws Exception {
 		if (logada ==null)
 			throw new Exception("Usuário precisa estar logado");
@@ -162,7 +176,7 @@ public class Fachada {
 
 		String texto = "\nConsultar Noticias por parte do título: "+caracteres;
 		if (result.isEmpty())  
-			texto += "consulta vazia";
+			texto += " consulta vazia";
 		else 
 			for(Noticia p: result)texto += "\n" + p;
 		return texto;

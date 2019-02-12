@@ -9,15 +9,15 @@ import javax.swing.border.EmptyBorder;
 
 import fachada.Fachada;
 
-import javax.swing.JTextField;
-import javax.swing.JPasswordField;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+import javax.swing.JPasswordField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class TelaLogin extends JFrame {
+public class TelaCadastroUsuario extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textField;
@@ -30,7 +30,7 @@ public class TelaLogin extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					TelaLogin frame = new TelaLogin();
+					TelaCadastroUsuario frame = new TelaCadastroUsuario();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -42,56 +42,55 @@ public class TelaLogin extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public TelaLogin() {
+	public TelaCadastroUsuario() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 288, 204);
+		setBounds(100, 100, 262, 196);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		JLabel label = new JLabel("Nome");
+		label.setBounds(36, 29, 46, 14);
+		contentPane.add(label);
+		
 		textField = new JTextField();
 		textField.setColumns(10);
-		textField.setBounds(117, 31, 86, 20);
+		textField.setBounds(98, 26, 108, 20);
 		contentPane.add(textField);
 		
 		passwordField = new JPasswordField();
-		passwordField.setBounds(117, 62, 86, 20);
+		passwordField.setBounds(98, 57, 108, 20);
 		contentPane.add(passwordField);
 		
-		JLabel lblSenha = new JLabel("Senha");
-		lblSenha.setBounds(55, 65, 46, 14);
-		contentPane.add(lblSenha);
+		JLabel label_1 = new JLabel("Senha");
+		label_1.setBounds(36, 60, 46, 14);
+		contentPane.add(label_1);
 		
-		JLabel lblNome = new JLabel("Nome");
-		lblNome.setBounds(55, 34, 46, 14);
-		contentPane.add(lblNome);
-		
-		JButton button = new JButton("Logar");
-		button.addActionListener(new ActionListener() {
+		JButton btnCadastrar = new JButton("Cadastrar");
+		btnCadastrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				try{
+				try {
 					String nome = textField.getText();
 					String senha = new String(passwordField.getPassword());
 					
 					Fachada.inicializar();
-					Fachada.login(nome, senha);
 					
-					//Fachada.finalizar();
-					System.out.println(Fachada.getLogada());
+					Fachada.cadastrarUsuario(nome, senha);
+					
+					Fachada.finalizar();
 					
 					String a = Fachada.getLogada().getNome();
-					JOptionPane.showMessageDialog(null,"Pessoa logada no momento: "+
+					JOptionPane.showMessageDialog(null,"Pessoa Cadastrada: "+
 							a+"\n");
-									
+					
 					dispose(); //fecha a janela
-				}
-				catch(Exception erro){
-					JOptionPane.showMessageDialog(null,erro.getMessage());
+				} catch (Exception e) {
+					JOptionPane.showMessageDialog(null,e.getMessage());
 				}
 			}
 		});
-		button.setBounds(97, 106, 86, 23);
-		contentPane.add(button);
+		btnCadastrar.setBounds(98, 106, 86, 23);
+		contentPane.add(btnCadastrar);
 	}
 }
