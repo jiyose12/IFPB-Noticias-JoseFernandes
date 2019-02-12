@@ -7,6 +7,8 @@ public class Consultar {
 		
 		Fachada.inicializar();
 		
+		System.out.println(Fachada.getLogada());
+		
 		try {
 			Fachada.login("pedro", "123456");
 		} catch (Exception e) {System.out.println(e.getMessage());}

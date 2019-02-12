@@ -3,9 +3,12 @@ package daojpa;
 import javax.persistence.NoResultException;
 import javax.persistence.Query;
 
+//import org.springframework.stereotype.Component;
+
 import daojpa.DAO;
 import modelo.Usuario;
 
+//@Component("daousuario")
 public class DAOUsuario extends DAO<Usuario>{
 	//login
 		public Usuario autenticar(String nome, String senha){

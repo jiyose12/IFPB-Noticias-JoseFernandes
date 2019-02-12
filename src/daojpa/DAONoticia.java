@@ -29,15 +29,15 @@ public class DAONoticia extends DAO<Noticia>{
 	@SuppressWarnings("unchecked")
 	public  List<Noticia> consultarNoticiasPorParteTitulo(String caracteres) {
 		Query q = manager.createQuery(
-				"select p from Noticia p where p.titulo like '%:x%' order by p.data ASC");
-		q.setParameter("x", caracteres);
+				"select p from Noticia p where p.titulo like :y order by p.data ASC");
+		q.setParameter("y", "%"+caracteres+"%");
 		return q.getResultList();
 	}
 	@SuppressWarnings("unchecked")
 	public  List<Noticia> consultarNoticiasPorParteConteudo(String caracteres) {
 		Query q = manager.createQuery(
-				"select p from Noticia p where p.descricao like '%:x%' order by p.data ASC");
-		q.setParameter("x", caracteres);
+				"select p from Noticia p where p.descricao like :x order by p.data ASC");
+		q.setParameter("x", "%"+caracteres+"%");
 		return q.getResultList();
 	}
 	
