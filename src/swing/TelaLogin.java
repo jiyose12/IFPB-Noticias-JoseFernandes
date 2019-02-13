@@ -74,7 +74,7 @@ public class TelaLogin extends JFrame {
 					String nome = textField.getText();
 					String senha = new String(passwordField.getPassword());
 					
-					Fachada.inicializar();
+					//Fachada.inicializar();
 					Fachada.login(nome, senha);
 					
 					//Fachada.finalizar();

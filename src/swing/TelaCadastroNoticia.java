@@ -72,13 +72,13 @@ public class TelaCadastroNoticia extends JFrame {
 				String tiponoticia = txtTiponoticia.getText();
 				String data = txtData.getText();
 				
-				Fachada.inicializar();
+				//Fachada.inicializar();
 				
 				Fachada.cadastrarNoticia(titulo, descricao, setornoticia, tiponoticia, IndPublicar.PUBLICADO, data);
 				
 				Noticia n = Fachada.consultarNoticiaPorTitulo(titulo);
 				String a = n.getTitulo();
-				Fachada.finalizar();
+				//Fachada.finalizar();
 				
 				JOptionPane.showMessageDialog(null,"Noticia Cadastrada com sucesso: "+a+"\n");
 				

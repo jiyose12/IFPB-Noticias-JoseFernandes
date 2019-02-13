@@ -63,6 +63,16 @@ public class TelaPrincipalNoticias {
 	 */
 	private void initialize() {
 		frame = new JFrame();
+		frame.addWindowListener(new WindowAdapter() {
+			@Override
+			public void windowClosing(WindowEvent arg0) {
+				Fachada.finalizar();
+			}
+			@Override
+			public void windowOpened(WindowEvent e) {
+				Fachada.inicializar();
+			}
+		});
 		frame.setBounds(100, 100, 485, 410);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
@@ -125,6 +135,22 @@ public class TelaPrincipalNoticias {
 		});
 		
 		mnCadastrar.add(mntmCadastrarusuario);
+		
+		JMenu mnAlterar = new JMenu("Alterar");
+		menuBar.add(mnAlterar);
+		
+		JMenuItem mntmAlterarnoticia = new JMenuItem("AlterarNoticia");
+		mntmAlterarnoticia.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					TelaAtualizarNoticia telaatualizarnoticia = new TelaAtualizarNoticia();
+					telaatualizarnoticia.setVisible(true);
+				} catch (Exception e2) {
+					// TODO: handle exception
+				}
+			}
+		});
+		mnAlterar.add(mntmAlterarnoticia);
 		frame.getContentPane().setLayout(null);
 		
 		txtTitulo = new JTextField();
@@ -166,7 +192,7 @@ public class TelaPrincipalNoticias {
 					String titulo = txtTitulo.getText();
 					
 					
-					Fachada.inicializar();
+					//Fachada.inicializar();
 					String result = Fachada.consultarNoticiasPorParteTitulo(titulo);
 					textArea.setText(result);
 					//Fachada.finalizar();
@@ -204,7 +230,7 @@ public class TelaPrincipalNoticias {
 				try {
 					String setornoticia = txtSetor.getText();
 					
-					Fachada.inicializar();
+					//Fachada.inicializar();
 					String result = Fachada.consultarNoticiasPorNomeSetor(setornoticia);
 					textArea.setText(result);
 					//Fachada.finalizar();
@@ -223,7 +249,7 @@ public class TelaPrincipalNoticias {
 				try {
 					String tiponoticia = txtTipo.getText();
 					
-					Fachada.inicializar();
+					//Fachada.inicializar();
 					String result = Fachada.consultarNoticiasPorNomeTipo(tiponoticia);
 					textArea.setText(result);
 					//Fachada.finalizar();
