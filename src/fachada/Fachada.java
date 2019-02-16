@@ -82,8 +82,8 @@ public class Fachada {
 //	return n;
 //	}
 	public static Noticia cadastrarNoticia(String titulo, String descricao, String setor, String tipo, IndPublicar indpublicar, String datastr ) throws Exception{
-		if (logada ==null)
-			throw new Exception("Usuário precisa estar logado");
+//		if (logada ==null)
+//			throw new Exception("Usuário precisa estar logado");
 		DAO.begin();	
 		
 		Noticia n = daonoticia.readByTitle(titulo);

@@ -19,6 +19,8 @@ public class AfterThrowingAspect {
 		
 		// log the exception
 		System.out.println("\n=====>>> The exception is: " + theExc);
+		
+		System.out.println("\nUsuário bloqueado por 15 minutos");
 	
 	}
 }
