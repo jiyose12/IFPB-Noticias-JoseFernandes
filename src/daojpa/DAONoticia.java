@@ -41,5 +41,13 @@ public class DAONoticia extends DAO<Noticia>{
 		return q.getResultList();
 	}
 	
+	@SuppressWarnings("unchecked")
+	public  List<Noticia> consultarNoticiasPorSetor(String caracteres) {
+		Query q = manager.createQuery(
+				"select p from Noticia p join p.setor s where s.descricao = :z order by p.data ASC");
+		q.setParameter("z", caracteres);
+		return q.getResultList();
+	}
+	
 
 }

@@ -152,6 +152,19 @@ public class Fachada {
 	 * @throws Exception 
 	 * 
 	 **********************************************************/
+public static List<Noticia> consultarNoticiasPorSetor(String caracteres) throws Exception{
+		
+		if (logada ==null)
+			throw new Exception("Usuário precisa estar logado");
+//		
+		List<Noticia> result = daonoticia.consultarNoticiasPorSetor(caracteres);
+		
+		if (result== null)
+			throw new Exception("nenhum resultado");
+		else 
+		
+		return result;
+	}
 	
 	public static Noticia consultarNoticiaPorTitulo(String caracteres) throws Exception{
 		
