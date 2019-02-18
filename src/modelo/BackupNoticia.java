@@ -29,6 +29,7 @@ public class BackupNoticia {
 	private String descricao;
 	private Date data = new Date();
 	private String nomefoto;
+	private String setor;
 	private String tiponoticia;
 	@Enumerated(EnumType.STRING)
 	private IndPublicar indpublicar;
@@ -44,10 +45,11 @@ public class BackupNoticia {
 	
 	//private List<NoticiasAnteriores> noticiasanteriores = new ArrayList<NoticiasAnteriores>();
 	public BackupNoticia() {}
-	public BackupNoticia(String titulo, String descricao, String tiponoticia, String datastr) {
+	public BackupNoticia(String titulo, String descricao, String setor, String tiponoticia, String datastr) {
 		super();
 		this.titulo = titulo;
 		this.descricao = descricao;
+		this.setor = setor;
 		this.tiponoticia = tiponoticia;
 		try {
 			SimpleDateFormat f = new SimpleDateFormat("dd/MM/yyyy");

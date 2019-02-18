@@ -7,6 +7,7 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 
+import fachada.Fachada;
 import modelo.Noticia;
 
 @Aspect
@@ -18,6 +19,9 @@ public class AroundAspect {
 		// print out method we are advising on
 		String method = theProceedingJoinPoint.getSignature().toShortString();
 		System.out.println("\n=====>>> Executing @Around on method: " + method);
+		
+		// get begin timestamp
+		long begin = System.currentTimeMillis();
 		
 		// display method arguments
 		
@@ -37,10 +41,8 @@ public class AroundAspect {
 		}
 		//inserir noticia no modelo backupnoticia
 		System.out.println(args2);
-		
-		
-		// get begin timestamp
-		long begin = System.currentTimeMillis();
+		Fachada.cadastrarBackupNoticia(args2);
+
 		
 		// now, let's execute the method
 		Object result = theProceedingJoinPoint.proceed();

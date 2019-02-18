@@ -7,6 +7,7 @@ import daojpa.*;
 
 import javax.xml.bind.DatatypeConverter;
 
+import modelo.BackupNoticia;
 import modelo.IndPublicar;
 import modelo.Noticia;
 import modelo.SetorNoticia;
@@ -14,6 +15,7 @@ import modelo.TipoNoticia;
 import modelo.Usuario;
 
 public class Fachada {
+	private static DAOBackupNoticia daobackupnoticia = new DAOBackupNoticia();
 	private static DAONoticia daonoticia = new DAONoticia();
 	private static DAOSetorNoticia daosetornoticia = new DAOSetorNoticia();
 	private static DAOTipoNoticia daotiponoticia = new DAOTipoNoticia();
@@ -117,10 +119,26 @@ public class Fachada {
 		DAO.commit();
 		return n;
 	}
+	public static BackupNoticia cadastrarBackupNoticia(List<String>args) throws Exception{
+//		if (logada ==null)
+//			throw new Exception("Usuário precisa estar logado");
+		DAO.begin();	
+		
+		String titulo = args.get(0);
+		String descricao = args.get(1);
+		String setor = args.get(2);
+		String tipo = args.get(3);
+		String datastr = args.get(4);
+		BackupNoticia n = new BackupNoticia(titulo, descricao, setor, tipo, datastr);
+
+		daobackupnoticia.create(n);
+		DAO.commit();
+		return n;
+	}
 	
 	public static SetorNoticia cadastrarSetorNoticia(String descricao) throws Exception{
-		if (logada ==null)
-			throw new Exception("Usuário precisa estar logado");
+//		if (logada ==null)
+//			throw new Exception("Usuário precisa estar logado");
 		DAO.begin();	
 		SetorNoticia s = daosetornoticia.readByDescription(descricao);
 		

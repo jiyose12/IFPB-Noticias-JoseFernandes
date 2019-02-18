@@ -1,77 +1,89 @@
-[EL Fine]: server: 2019-02-16 11:12:09.151--Thread(Thread[AWT-EventQueue-0,6,main])--Configured server platform: org.eclipse.persistence.platform.server.NoServerPlatform
-[EL Config]: metadata: 2019-02-16 11:12:09.342--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class modelo.SetorNoticia] is set to [FIELD].
-[EL Config]: metadata: 2019-02-16 11:12:09.358--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to many mapping element [field noticias] is being defaulted to: class modelo.Noticia.
-[EL Config]: metadata: 2019-02-16 11:12:09.362--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class modelo.BackupNoticia] is set to [FIELD].
-[EL Config]: metadata: 2019-02-16 11:12:09.363--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class modelo.Noticia] is set to [FIELD].
-[EL Config]: metadata: 2019-02-16 11:12:09.363--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to many mapping element [field setor] is being defaulted to: class modelo.SetorNoticia.
-[EL Config]: metadata: 2019-02-16 11:12:09.364--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to many mapping element [field tipo] is being defaulted to: class modelo.TipoNoticia.
-[EL Config]: metadata: 2019-02-16 11:12:09.364--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class modelo.TipoNoticia] is set to [FIELD].
-[EL Config]: metadata: 2019-02-16 11:12:09.364--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to many mapping element [field noticias] is being defaulted to: class modelo.Noticia.
-[EL Config]: metadata: 2019-02-16 11:12:09.365--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class modelo.Usuario] is set to [FIELD].
-[EL Config]: metadata: 2019-02-16 11:12:09.365--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class modelo.SetorNoticia] is being defaulted to: SetorNoticia.
-[EL Config]: metadata: 2019-02-16 11:12:09.367--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class modelo.SetorNoticia] is being defaulted to: SETORNOTICIA.
-[EL Config]: metadata: 2019-02-16 11:12:09.377--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [id] is being defaulted to: ID.
-[EL Config]: metadata: 2019-02-16 11:12:09.377--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [descricao] is being defaulted to: DESCRICAO.
-[EL Config]: metadata: 2019-02-16 11:12:09.377--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class modelo.BackupNoticia] is being defaulted to: BackupNoticia.
-[EL Config]: metadata: 2019-02-16 11:12:09.378--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class modelo.BackupNoticia] is being defaulted to: BACKUPNOTICIA.
-[EL Config]: metadata: 2019-02-16 11:12:09.378--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [data] is being defaulted to: DATA.
-[EL Config]: metadata: 2019-02-16 11:12:09.379--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [nrvisitas] is being defaulted to: NRVISITAS.
-[EL Config]: metadata: 2019-02-16 11:12:09.38--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [titulo] is being defaulted to: TITULO.
-[EL Config]: metadata: 2019-02-16 11:12:09.38--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [nomefoto] is being defaulted to: NOMEFOTO.
-[EL Config]: metadata: 2019-02-16 11:12:09.38--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [id] is being defaulted to: ID.
-[EL Config]: metadata: 2019-02-16 11:12:09.38--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [indpublicar] is being defaulted to: INDPUBLICAR.
-[EL Config]: metadata: 2019-02-16 11:12:09.382--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [descricao] is being defaulted to: DESCRICAO.
-[EL Config]: metadata: 2019-02-16 11:12:09.382--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class modelo.Noticia] is being defaulted to: Noticia.
-[EL Config]: metadata: 2019-02-16 11:12:09.383--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class modelo.Noticia] is being defaulted to: NOTICIA.
-[EL Config]: metadata: 2019-02-16 11:12:09.383--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [data] is being defaulted to: DATA.
-[EL Config]: metadata: 2019-02-16 11:12:09.383--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [nrvisitas] is being defaulted to: NRVISITAS.
-[EL Config]: metadata: 2019-02-16 11:12:09.383--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [titulo] is being defaulted to: TITULO.
-[EL Config]: metadata: 2019-02-16 11:12:09.383--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [nomefoto] is being defaulted to: NOMEFOTO.
-[EL Config]: metadata: 2019-02-16 11:12:09.383--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [id] is being defaulted to: ID.
-[EL Config]: metadata: 2019-02-16 11:12:09.383--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [indpublicar] is being defaulted to: INDPUBLICAR.
-[EL Config]: metadata: 2019-02-16 11:12:09.383--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [descricao] is being defaulted to: DESCRICAO.
-[EL Config]: metadata: 2019-02-16 11:12:09.384--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class modelo.TipoNoticia] is being defaulted to: TipoNoticia.
-[EL Config]: metadata: 2019-02-16 11:12:09.384--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class modelo.TipoNoticia] is being defaulted to: TIPONOTICIA.
-[EL Config]: metadata: 2019-02-16 11:12:09.384--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [id] is being defaulted to: ID.
-[EL Config]: metadata: 2019-02-16 11:12:09.384--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [descricao] is being defaulted to: DESCRICAO.
-[EL Config]: metadata: 2019-02-16 11:12:09.384--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class modelo.Usuario] is being defaulted to: Usuario.
-[EL Config]: metadata: 2019-02-16 11:12:09.384--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class modelo.Usuario] is being defaulted to: USUARIO.
-[EL Config]: metadata: 2019-02-16 11:12:09.384--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [senha] is being defaulted to: SENHA.
-[EL Config]: metadata: 2019-02-16 11:12:09.384--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [nome] is being defaulted to: NOME.
-[EL Config]: metadata: 2019-02-16 11:12:09.399--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The join table name for the many to many mapping [field noticias] is being defaulted to: SETORNOTICIA_NOTICIA.
-[EL Config]: metadata: 2019-02-16 11:12:09.4--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The source primary key column name for the many to many mapping [field noticias] is being defaulted to: ID.
-[EL Config]: metadata: 2019-02-16 11:12:09.4--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The source foreign key column name for the many to many mapping [noticias] is being defaulted to: setor_ID.
-[EL Config]: metadata: 2019-02-16 11:12:09.4--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The target primary key column name for the many to many mapping [field noticias] is being defaulted to: ID.
-[EL Config]: metadata: 2019-02-16 11:12:09.4--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The target foreign key column name for the many to many mapping [noticias] is being defaulted to: noticias_ID.
-[EL Config]: metadata: 2019-02-16 11:12:09.401--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The join table name for the many to many mapping [field tipo] is being defaulted to: NOTICIA_TIPONOTICIA.
-[EL Config]: metadata: 2019-02-16 11:12:09.401--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The source primary key column name for the many to many mapping [field tipo] is being defaulted to: ID.
-[EL Config]: metadata: 2019-02-16 11:12:09.401--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The source foreign key column name for the many to many mapping [tipo] is being defaulted to: noticias_ID.
-[EL Config]: metadata: 2019-02-16 11:12:09.401--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The target primary key column name for the many to many mapping [field tipo] is being defaulted to: ID.
-[EL Config]: metadata: 2019-02-16 11:12:09.401--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--The target foreign key column name for the many to many mapping [tipo] is being defaulted to: tipo_ID.
-[EL Info]: 2019-02-16 11:12:09.655--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--EclipseLink, version: Eclipse Persistence Services - 2.7.1.v20171221-bd47e8f
-[EL Fine]: connection: 2019-02-16 11:12:09.755--Thread(Thread[AWT-EventQueue-0,6,main])--Detected database platform: org.eclipse.persistence.platform.database.PostgreSQLPlatform
-[EL Config]: connection: 2019-02-16 11:12:09.761--ServerSession(648298933)--Connection(46607395)--Thread(Thread[AWT-EventQueue-0,6,main])--connecting(DatabaseLogin(
+[EL Fine]: server: 2019-02-18 14:42:01.995--Thread(Thread[AWT-EventQueue-0,6,main])--Configured server platform: org.eclipse.persistence.platform.server.NoServerPlatform
+[EL Config]: metadata: 2019-02-18 14:42:02.18--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class modelo.SetorNoticia] is set to [FIELD].
+[EL Config]: metadata: 2019-02-18 14:42:02.197--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to many mapping element [field noticias] is being defaulted to: class modelo.Noticia.
+[EL Config]: metadata: 2019-02-18 14:42:02.201--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class modelo.BackupNoticia] is set to [FIELD].
+[EL Config]: metadata: 2019-02-18 14:42:02.203--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class modelo.Noticia] is set to [FIELD].
+[EL Config]: metadata: 2019-02-18 14:42:02.203--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to many mapping element [field setor] is being defaulted to: class modelo.SetorNoticia.
+[EL Config]: metadata: 2019-02-18 14:42:02.203--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to many mapping element [field tipo] is being defaulted to: class modelo.TipoNoticia.
+[EL Config]: metadata: 2019-02-18 14:42:02.204--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class modelo.TipoNoticia] is set to [FIELD].
+[EL Config]: metadata: 2019-02-18 14:42:02.204--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The target entity (reference) class for the many to many mapping element [field noticias] is being defaulted to: class modelo.Noticia.
+[EL Config]: metadata: 2019-02-18 14:42:02.204--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The access type for the persistent class [class modelo.Usuario] is set to [FIELD].
+[EL Config]: metadata: 2019-02-18 14:42:02.204--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class modelo.SetorNoticia] is being defaulted to: SetorNoticia.
+[EL Config]: metadata: 2019-02-18 14:42:02.206--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class modelo.SetorNoticia] is being defaulted to: SETORNOTICIA.
+[EL Config]: metadata: 2019-02-18 14:42:02.215--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2019-02-18 14:42:02.216--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [descricao] is being defaulted to: DESCRICAO.
+[EL Config]: metadata: 2019-02-18 14:42:02.216--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class modelo.BackupNoticia] is being defaulted to: BackupNoticia.
+[EL Config]: metadata: 2019-02-18 14:42:02.216--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class modelo.BackupNoticia] is being defaulted to: BACKUPNOTICIA.
+[EL Config]: metadata: 2019-02-18 14:42:02.217--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [setor] is being defaulted to: SETOR.
+[EL Config]: metadata: 2019-02-18 14:42:02.217--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [data] is being defaulted to: DATA.
+[EL Config]: metadata: 2019-02-18 14:42:02.219--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [nrvisitas] is being defaulted to: NRVISITAS.
+[EL Config]: metadata: 2019-02-18 14:42:02.219--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [titulo] is being defaulted to: TITULO.
+[EL Config]: metadata: 2019-02-18 14:42:02.219--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [nomefoto] is being defaulted to: NOMEFOTO.
+[EL Config]: metadata: 2019-02-18 14:42:02.22--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2019-02-18 14:42:02.22--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [indpublicar] is being defaulted to: INDPUBLICAR.
+[EL Config]: metadata: 2019-02-18 14:42:02.221--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [descricao] is being defaulted to: DESCRICAO.
+[EL Config]: metadata: 2019-02-18 14:42:02.222--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [tiponoticia] is being defaulted to: TIPONOTICIA.
+[EL Config]: metadata: 2019-02-18 14:42:02.222--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class modelo.Noticia] is being defaulted to: Noticia.
+[EL Config]: metadata: 2019-02-18 14:42:02.222--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class modelo.Noticia] is being defaulted to: NOTICIA.
+[EL Config]: metadata: 2019-02-18 14:42:02.222--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [data] is being defaulted to: DATA.
+[EL Config]: metadata: 2019-02-18 14:42:02.222--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [nrvisitas] is being defaulted to: NRVISITAS.
+[EL Config]: metadata: 2019-02-18 14:42:02.222--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [titulo] is being defaulted to: TITULO.
+[EL Config]: metadata: 2019-02-18 14:42:02.223--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [nomefoto] is being defaulted to: NOMEFOTO.
+[EL Config]: metadata: 2019-02-18 14:42:02.223--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2019-02-18 14:42:02.223--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [indpublicar] is being defaulted to: INDPUBLICAR.
+[EL Config]: metadata: 2019-02-18 14:42:02.223--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [descricao] is being defaulted to: DESCRICAO.
+[EL Config]: metadata: 2019-02-18 14:42:02.223--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class modelo.TipoNoticia] is being defaulted to: TipoNoticia.
+[EL Config]: metadata: 2019-02-18 14:42:02.223--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class modelo.TipoNoticia] is being defaulted to: TIPONOTICIA.
+[EL Config]: metadata: 2019-02-18 14:42:02.223--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [id] is being defaulted to: ID.
+[EL Config]: metadata: 2019-02-18 14:42:02.223--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [descricao] is being defaulted to: DESCRICAO.
+[EL Config]: metadata: 2019-02-18 14:42:02.224--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The alias name for the entity class [class modelo.Usuario] is being defaulted to: Usuario.
+[EL Config]: metadata: 2019-02-18 14:42:02.224--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The table name for entity [class modelo.Usuario] is being defaulted to: USUARIO.
+[EL Config]: metadata: 2019-02-18 14:42:02.224--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [senha] is being defaulted to: SENHA.
+[EL Config]: metadata: 2019-02-18 14:42:02.224--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The column name for element [nome] is being defaulted to: NOME.
+[EL Config]: metadata: 2019-02-18 14:42:02.238--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The join table name for the many to many mapping [field noticias] is being defaulted to: SETORNOTICIA_NOTICIA.
+[EL Config]: metadata: 2019-02-18 14:42:02.239--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The source primary key column name for the many to many mapping [field noticias] is being defaulted to: ID.
+[EL Config]: metadata: 2019-02-18 14:42:02.239--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The source foreign key column name for the many to many mapping [noticias] is being defaulted to: setor_ID.
+[EL Config]: metadata: 2019-02-18 14:42:02.239--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The target primary key column name for the many to many mapping [field noticias] is being defaulted to: ID.
+[EL Config]: metadata: 2019-02-18 14:42:02.24--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The target foreign key column name for the many to many mapping [noticias] is being defaulted to: noticias_ID.
+[EL Config]: metadata: 2019-02-18 14:42:02.24--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The join table name for the many to many mapping [field tipo] is being defaulted to: NOTICIA_TIPONOTICIA.
+[EL Config]: metadata: 2019-02-18 14:42:02.24--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The source primary key column name for the many to many mapping [field tipo] is being defaulted to: ID.
+[EL Config]: metadata: 2019-02-18 14:42:02.24--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The source foreign key column name for the many to many mapping [tipo] is being defaulted to: noticias_ID.
+[EL Config]: metadata: 2019-02-18 14:42:02.24--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The target primary key column name for the many to many mapping [field tipo] is being defaulted to: ID.
+[EL Config]: metadata: 2019-02-18 14:42:02.24--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--The target foreign key column name for the many to many mapping [tipo] is being defaulted to: tipo_ID.
+[EL Info]: 2019-02-18 14:42:02.486--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--EclipseLink, version: Eclipse Persistence Services - 2.7.1.v20171221-bd47e8f
+[EL Fine]: connection: 2019-02-18 14:42:02.602--Thread(Thread[AWT-EventQueue-0,6,main])--Detected database platform: org.eclipse.persistence.platform.database.PostgreSQLPlatform
+[EL Config]: connection: 2019-02-18 14:42:02.608--ServerSession(728866626)--Connection(745620447)--Thread(Thread[AWT-EventQueue-0,6,main])--connecting(DatabaseLogin(
 	platform=>PostgreSQLPlatform
 	user name=> "postgres"
 	datasource URL=> "jdbc:postgresql://localhost:5432/noticias"
 ))
-[EL Config]: connection: 2019-02-16 11:12:09.79--ServerSession(648298933)--Connection(1780810934)--Thread(Thread[AWT-EventQueue-0,6,main])--Connected: jdbc:postgresql://localhost:5432/noticias
+[EL Config]: connection: 2019-02-18 14:42:02.64--ServerSession(728866626)--Connection(1503676061)--Thread(Thread[AWT-EventQueue-0,6,main])--Connected: jdbc:postgresql://localhost:5432/noticias
 	User: postgres
 	Database: PostgreSQL  Version: 10.3
 	Driver: PostgreSQL Native Driver  Version: PostgreSQL 9.4 JDBC4.1 (build 1206)
-[EL Info]: connection: 2019-02-16 11:12:09.827--ServerSession(648298933)--Thread(Thread[AWT-EventQueue-0,6,main])--/file:/C:/Users/Jiyose/Documents/Jiyose Dell/Estudo Jiyose/Udemy Jiyose/projetos-eclipse-udemy/NoticiasDB4O-JoseFernandes/target/classes/_abc-eclipselink login successful
-[EL Fine]: sql: 2019-02-16 11:12:51.782--ServerSession(648298933)--Connection(1780810934)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, DATA, DESCRICAO, INDPUBLICAR, NOMEFOTO, NRVISITAS, TITULO FROM NOTICIA WHERE (TITULO = ?)
-	bind => [teste 6 noticia]
-[EL Fine]: sql: 2019-02-16 11:12:51.793--ClientSession(1044704360)--Connection(1780810934)--Thread(Thread[AWT-EventQueue-0,6,main])--INSERT INTO NOTICIA (DATA, DESCRICAO, INDPUBLICAR, NOMEFOTO, NRVISITAS, TITULO) VALUES (?, ?, ?, ?, ?, ?)
-	bind => [2019-02-11 00:00:00.0, teste 6 lorem ipsum, PUBLICADO, null, 0, teste 6 noticia]
-[EL Fine]: sql: 2019-02-16 11:12:51.795--ClientSession(1044704360)--Connection(1780810934)--Thread(Thread[AWT-EventQueue-0,6,main])--select lastval()
-[EL Fine]: sql: 2019-02-16 11:12:51.798--ClientSession(1044704360)--Connection(1780810934)--Thread(Thread[AWT-EventQueue-0,6,main])--INSERT INTO SETORNOTICIA (DESCRICAO) VALUES (?)
-	bind => [1 Vara]
-[EL Fine]: sql: 2019-02-16 11:12:51.799--ClientSession(1044704360)--Connection(1780810934)--Thread(Thread[AWT-EventQueue-0,6,main])--select lastval()
-[EL Fine]: sql: 2019-02-16 11:12:51.799--ClientSession(1044704360)--Connection(1780810934)--Thread(Thread[AWT-EventQueue-0,6,main])--INSERT INTO TIPONOTICIA (DESCRICAO) VALUES (?)
-	bind => [internet]
-[EL Fine]: sql: 2019-02-16 11:12:51.8--ClientSession(1044704360)--Connection(1780810934)--Thread(Thread[AWT-EventQueue-0,6,main])--select lastval()
-[EL Fine]: sql: 2019-02-16 11:12:51.801--ClientSession(1044704360)--Connection(1780810934)--Thread(Thread[AWT-EventQueue-0,6,main])--INSERT INTO NOTICIA_TIPONOTICIA (tipo_ID, noticias_ID) VALUES (?, ?)
-	bind => [36, 22]
-[EL Fine]: sql: 2019-02-16 11:12:51.802--ClientSession(1044704360)--Connection(1780810934)--Thread(Thread[AWT-EventQueue-0,6,main])--INSERT INTO SETORNOTICIA_NOTICIA (noticias_ID, setor_ID) VALUES (?, ?)
-	bind => [22, 54]
+[EL Info]: connection: 2019-02-18 14:42:02.675--ServerSession(728866626)--Thread(Thread[AWT-EventQueue-0,6,main])--/file:/C:/Users/Jiyose/Documents/Jiyose Dell/Estudo Jiyose/Udemy Jiyose/projetos-eclipse-udemy/NoticiasDB4O-JoseFernandes/target/classes/_abc-eclipselink login successful
+[EL Fine]: sql: 2019-02-18 14:43:14.492--ClientSession(1645571233)--Connection(1503676061)--Thread(Thread[AWT-EventQueue-0,6,main])--INSERT INTO BACKUPNOTICIA (DATA, DESCRICAO, INDPUBLICAR, NOMEFOTO, NRVISITAS, SETOR, TIPONOTICIA, TITULO) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [2019-02-18 00:00:00.0, teste de inserção no backupnoticia, null, null, 0, 7 Vara, intranet, Noticia teste 8]
+[EL Fine]: sql: 2019-02-18 14:43:14.497--ClientSession(1645571233)--Connection(1503676061)--Thread(Thread[AWT-EventQueue-0,6,main])--select lastval()
+[EL Fine]: sql: 2019-02-18 14:43:14.674--ServerSession(728866626)--Connection(1503676061)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, DATA, DESCRICAO, INDPUBLICAR, NOMEFOTO, NRVISITAS, TITULO FROM NOTICIA WHERE (TITULO = ?)
+	bind => [Noticia teste 8]
+[EL Fine]: sql: 2019-02-18 14:43:14.679--ClientSession(2136034276)--Connection(1503676061)--Thread(Thread[AWT-EventQueue-0,6,main])--INSERT INTO NOTICIA (DATA, DESCRICAO, INDPUBLICAR, NOMEFOTO, NRVISITAS, TITULO) VALUES (?, ?, ?, ?, ?, ?)
+	bind => [2019-02-18 00:00:00.0, teste de inserção no backupnoticia, PUBLICADO, null, 0, Noticia teste 8]
+[EL Fine]: sql: 2019-02-18 14:43:14.68--ClientSession(2136034276)--Connection(1503676061)--Thread(Thread[AWT-EventQueue-0,6,main])--select lastval()
+[EL Fine]: sql: 2019-02-18 14:43:14.681--ClientSession(2136034276)--Connection(1503676061)--Thread(Thread[AWT-EventQueue-0,6,main])--INSERT INTO SETORNOTICIA (DESCRICAO) VALUES (?)
+	bind => [7 Vara]
+[EL Fine]: sql: 2019-02-18 14:43:14.681--ClientSession(2136034276)--Connection(1503676061)--Thread(Thread[AWT-EventQueue-0,6,main])--select lastval()
+[EL Fine]: sql: 2019-02-18 14:43:14.682--ClientSession(2136034276)--Connection(1503676061)--Thread(Thread[AWT-EventQueue-0,6,main])--INSERT INTO TIPONOTICIA (DESCRICAO) VALUES (?)
+	bind => [intranet]
+[EL Fine]: sql: 2019-02-18 14:43:14.683--ClientSession(2136034276)--Connection(1503676061)--Thread(Thread[AWT-EventQueue-0,6,main])--select lastval()
+[EL Fine]: sql: 2019-02-18 14:43:14.684--ClientSession(2136034276)--Connection(1503676061)--Thread(Thread[AWT-EventQueue-0,6,main])--INSERT INTO NOTICIA_TIPONOTICIA (tipo_ID, noticias_ID) VALUES (?, ?)
+	bind => [38, 24]
+[EL Fine]: sql: 2019-02-18 14:43:14.685--ClientSession(2136034276)--Connection(1503676061)--Thread(Thread[AWT-EventQueue-0,6,main])--INSERT INTO SETORNOTICIA_NOTICIA (noticias_ID, setor_ID) VALUES (?, ?)
+	bind => [24, 56]
+[EL Fine]: sql: 2019-02-18 14:43:46.958--ServerSession(728866626)--Connection(1503676061)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT NOME, SENHA FROM USUARIO WHERE ((NOME = ?) AND (SENHA = ?))
+	bind => [pedro, 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92]
+[EL Fine]: sql: 2019-02-18 14:43:50.818--ClientSession(1517067056)--Connection(1503676061)--Thread(Thread[AWT-EventQueue-0,6,main])--INSERT INTO BACKUPNOTICIA (DATA, DESCRICAO, INDPUBLICAR, NOMEFOTO, NRVISITAS, SETOR, TIPONOTICIA, TITULO) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+	bind => [2019-02-18 00:00:00.0, teste de inserção no backupnoticia, null, null, 0, 7 Vara, intranet, Noticia teste 8]
+[EL Fine]: sql: 2019-02-18 14:43:50.82--ClientSession(1517067056)--Connection(1503676061)--Thread(Thread[AWT-EventQueue-0,6,main])--select lastval()
+[EL Fine]: sql: 2019-02-18 14:43:50.824--ServerSession(728866626)--Connection(1503676061)--Thread(Thread[AWT-EventQueue-0,6,main])--SELECT ID, DATA, DESCRICAO, INDPUBLICAR, NOMEFOTO, NRVISITAS, TITULO FROM NOTICIA WHERE (TITULO = ?)
+	bind => [Noticia teste 8]
